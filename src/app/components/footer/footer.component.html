@@ -1,0 +1,24 @@
+<footer
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_180px] border-t border-t-black pt-10 pb-12 mb:pt-12 mb:pb-14 px-10 sm:px-12 md:px-16 lg:px-32 bg-white shadow-lg">
+    <div class="col-span-3 grid sm:block justify-center text-center sm:text-left">
+        <img [defaultImage]="defaultImage" [lazyLoad]="logo" [errorImage]="errorImage" alt="Icon Menu"
+            class="w-40 md:w-48" />
+        <p class="py-5 sm:py-8 text-sm md:text-base">{{ copyright }}</p>
+    </div>
+    <div class="col-span-2 sm:col-span-1 text-center sm:text-left mb-4 sm:mb-0 px-2">
+        <div *ngFor="let item of listContact">
+            <span class="text-sm md:text-base" [innerHTML]="item.title"></span>
+        </div>
+    </div>
+    <div class="col-span-2 sm:col-span-1 text-center sm:text-left px-2">
+        <div *ngFor="let item of listTermsAndConditions">
+            <span class="underline cursor-pointer text-sm md:text-base" [innerHTML]="item.title"></span>
+        </div>
+    </div>
+    <div class="flex justify-center items-end gap-5 col-span-3 lg:col-span-1 pt-7 lg:pt-0">
+        <div *ngFor="let item of listNetworks">
+            <img [defaultImage]="defaultImage" [lazyLoad]="item.icon" [errorImage]="errorImage" [alt]="item.alt"
+                class="w-5 h-5 md:w-7 md:h-7 cursor-pointer" />
+        </div>
+    </div>
+</footer>

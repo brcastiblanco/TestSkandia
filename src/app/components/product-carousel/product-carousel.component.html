@@ -1,0 +1,56 @@
+@if (cards) {
+<div class="container mx-auto">
+    @if (customOptions) {
+    <owl-carousel-o [options]="customOptions" class="relative">
+        <ng-container *ngFor="let card of cards">
+            <ng-template carouselSlide>
+                @if (card.nameProduct === 'BANNER') {
+                <div class="bg-banner text-left w-full rounded-lg overflow-hidden hover:shadow-lg shadow-green-500 border-b-4 p-5 mx-2"
+                    [ngClass]="[card.color == 'green'? 'border-b-green-600': card.color == 'blue' ? 'border-b-blue-800' : card.color == 'orange' ? 'border-b-orange-600' : card.color == 'yellow' ? 'border-b-yellow-600' : 'border-b-blue-400']"
+                    [style.background-image]="'url(' + card.numberProduct + ')'">
+                    <button class="mt-32 text-sm montserrat bold underline bg-green-600 px-4 py-2 rounded-full">
+                        {{ card.detaildProduct | uppercase }}
+                    </button>
+                </div>
+                } @else {
+                <div class="bg-white w-full rounded-lg overflow-hidden hover:shadow-lg shadow-green-500 border-b-4 p-5 mx-2"
+                    [ngClass]="[card.color == 'green'? 'border-b-green-600': card.color == 'blue' ? 'border-b-blue-800' : card.color == 'orange' ? 'border-b-orange-600' : card.color == 'yellow' ? 'border-b-yellow-600' : 'border-b-blue-400']">
+                    <div class="flex justify-end pb-1">
+                        <mat-checkbox class="text-green-500"></mat-checkbox>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-lg font-semibold text-gray-800 montserrat bold">
+                            {{ card.nameProduct }}
+                        </h3>
+                        <p class="montserrat medium text-lg">#{{ card.numberProduct }}</p>
+                    </div>
+                    <hr class="my-6">
+                    <div class="text-left">
+                        <p class="montserrat bold">
+                            @if (card.nameProduct === 'CREA') {
+                            {{ youCurrent }}
+                            }
+                            @else {
+                            {{ youHave }}
+                            }
+                        </p>
+                        <p class="text-green-500">{{ card.balanceProduct | currency : "USD" : "symbol" : "1.0-0" }}</p>
+                    </div>
+                    <div class="bg-gray-500 relative px-4 py-5 mt-14">
+                        <img [defaultImage]="defaultImage" [lazyLoad]="card.icon" [errorImage]="errorImage"
+                            alt="Icon help user" class="w-9 h-9 -top-6 left-0 right-0 m-auto absolute" />
+                        <p class="text-sm/4">¡{{ card.detaildProduct }}!</p>
+                        <p class="text-sm/4">{{ card.recommendation }}</p>
+                    </div>
+                </div>
+                }
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+    }
+</div>
+}@else {
+<div>
+    <p>No data available.</p>
+</div>
+}

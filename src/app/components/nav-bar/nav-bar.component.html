@@ -1,0 +1,48 @@
+<nav
+    class="sticky top-0 bg-white shadow-lg z-50 md:px-0 grid grid-cols-1 lg:grid-cols-[64px_1fr_1fr] grid-rows-[auto_auto] lg:grid-rows-1 gap-x-4">
+    <div class="col-span-1 row-span-1 sm:row-span-2 absolute lg:relative">
+        <div class="py-4 sm:py-7 md:py-11 lg:py-9 px-0 pl-4 md:px-5 flex justify-center items-center">
+            <button (click)="toggleMenu()" class="relative w-6 h-5 flex flex-col justify-between items-center">
+                <span class="block w-full h-1 bg-black transition-all duration-300 ease-in-out transform"
+                    [ngClass]="{'rotate-45 translate-y-2': isOpen}"></span>
+                <span class="block w-full h-1 bg-black transition-all duration-300 ease-in-out"
+                    [ngClass]="{'opacity-0': isOpen}"></span>
+                <span class="block w-full h-1 bg-black transition-all duration-300 ease-in-out transform"
+                    [ngClass]="{'-rotate-45 -translate-y-2': isOpen}"></span>
+            </button>
+        </div>
+    </div>
+    <div class="flex items-center justify-center lg:justify-start pt-4 lg:pt-0 pb-4 sm:pb-2 ml-0 xl:ml-[5vw] lg:ml-8">
+        <div class="flex items-center justify-center gap-3">
+            <div class="flex justify-end items-center">
+                <img [defaultImage]="defaultImage" [lazyLoad]="logo" [errorImage]="errorImage" alt="Icon Menu"
+                    class="w-32 sm:w-28 md:w-40" />
+            </div>
+            <div class="hidden sm:flex justify-center items-center">
+                <span class="h-6 md:h-10 lg:h-11 w-1 flex justify-center items-center bg-black"></span>
+            </div>
+            <div class="hidden sm:flex justify-start items-center">
+                <p class="montserrat medium text-sm md:text-xl">{{textLogo}}</p>
+            </div>
+        </div>
+    </div>
+    <div
+        class="hidden sm:flex items-center justify-center lg:justify-end gap-6 pb-4 lg:pb-0 mr-0 xl:mr-[12vw] lg:mr-16 ">
+        <div *ngFor="let item of listOptions" class="flex items-center justify-center gap-3"
+            [ngClass]="[item.id == 'help'? 'relative group':'']">
+            @if (item.id == 'help') {
+            <button [matTooltip]="item.title" class="p-0">
+                <img [defaultImage]="defaultImage" [lazyLoad]="item.icon" [errorImage]="errorImage" alt="Icon help user"
+                    class="cursor-pointer w-5 h-5 md:w-8 md:h-8" />
+            </button>
+            } @else {
+            <img [defaultImage]="defaultImage" [lazyLoad]="item.icon" [errorImage]="errorImage" [alt]="item.alt"
+                class="w-4 h-4 md:w-7 md:h-7" />
+            <p class="cursor-pointer underline text-xs md:text-sm verdana bold">
+                {{ item.title }}
+            </p>
+            }
+        </div>
+    </div>
+    <app-nav-menu [isOpen]="isOpen"></app-nav-menu>
+</nav>

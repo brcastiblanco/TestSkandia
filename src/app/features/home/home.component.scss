@@ -1,0 +1,13 @@
+.bg-stars {
+    background-image: url('/assets/space.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 98.9vw;
+    height: 45vh;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+}

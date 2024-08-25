@@ -1,0 +1,52 @@
+.bg-banner {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+::ng-deep .owl-carousel {
+    .owl-stage {
+        display: inline-flex;
+    }
+
+    .owl-item {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        img {
+            width: auto;
+        }
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: -6%;
+        width: 111.5%;
+        max-width: 75.8rem;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+
+        .owl-prev,
+        .owl-next {
+            background-color: green;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background-color: rgb(106, 224, 106);
+            }
+
+            &.disabled {
+                background-color: gray;
+                cursor: no-drop
+            }
+        }
+    }
+}
