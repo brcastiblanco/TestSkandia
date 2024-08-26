@@ -1,7 +1,19 @@
+@import '../../../colors.scss';
+
 .img-mountain {
     position: relative;
     background-image: url('/assets/mountain.png');
     background-position: bottom right;
     background-size: auto 124px;
     background-repeat: no-repeat;
+}
+
+.bg-yellow {
+    background-color: $yellow;
+}
+.bg-light-blue {
+    background-color: $light-blue;
+}
+.bg-light-green {
+    background-color: $light-green;
 }

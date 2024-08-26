@@ -1,9 +1,9 @@
-<div class="absolute left-0 h-[94.3vh] sm:h-[91.3vh] md:h-[88.3vh] lg:h-[90.3vh] flex flex-col bg-gray-800 text-white transition-all duration-300 ease-in-out"
+<div class="absolute left-0 h-[94.3vh] sm:h-[91.3vh] md:h-[88.3vh] lg:h-[90.3vh] flex flex-col bg-light-gray transition-all duration-300 ease-in-out"
     [ngClass]="{'w-14 md:w-16': !isOpen, 'w-56 md:w-64': isOpen}">
     <div class="flex flex-col list-menu">
         <div *ngFor="let item of menuItems" class="group">
             <a [routerLink]="item.route" [routerLinkActive]="[item.desk ? 'active' : '']"
-                class="flex items-center p-4 md:p-[1.37rem] text-white hover:bg-gray-600"
+                class="flex items-center p-4 md:p-[1.37rem] text-white hover:bg-gray-300"
                 [ngClass]="{'block sm:hidden': !item.desk, 'block': item.desk}">
                 <img [defaultImage]="defaultImage" [lazyLoad]="item.icon" [errorImage]="errorImage" [alt]="item.alt"
                     class="w-5 h-5" />

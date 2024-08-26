@@ -66,7 +66,7 @@ export class ProductCarouselComponent {
       detaildProduct: 'explora ahora',
       icon: '',
       recommendation: '',
-      color: 'yellow'
+      color: 'border-peach'
     };
     if (this.cards) this.cards.push(newItem);
   }
@@ -93,10 +93,10 @@ export class ProductCarouselComponent {
 
   getColorForProduct(productName: string): string {
     const recommendations: { [key: string]: string } = {
-      "MFUND": "green",
-      "CREA": "blue-light",
-      "FICS": "blue",
-      "BOLT": "orange"
+      "MFUND": "border-green-light",
+      "CREA": "border-light-blue",
+      "FICS": "border-dark-blue",
+      "BOLT": "border-yellow"
     };
     return recommendations[productName] || 'Recomendación predeterminada';
   }

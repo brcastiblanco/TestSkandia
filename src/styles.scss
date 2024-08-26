@@ -37,7 +37,22 @@ $LadingSkandia-theme: mat.define-theme((
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import './colors.scss';
 
+p, h1, h2, span, a, button {
+  color: $gray
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+
+// typography
 body {
     margin: 0;
     font-family: Verdana, sans-serif;

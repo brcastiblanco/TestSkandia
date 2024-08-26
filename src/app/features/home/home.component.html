@@ -3,7 +3,7 @@
     <div class="flex gap-3 pb-9">
         <img [defaultImage]="defaultImage" [lazyLoad]="iconHome" [errorImage]="errorImage" alt="Icon help user"
             class="cursor-pointer w-4 h-4" />
-        <a routerLink="/home" class="underline verdana bold text-sm text-white">{{ goHome }}</a>
+        <a routerLink="/home" class="underline verdana bold text-sm text-white test">{{ goHome }}</a>
     </div>
     <div>
         <h1 class="montserrat bold text-[1.7rem] text-white">{{ objectiveAdd }}</h1>
@@ -13,9 +13,9 @@
         <app-objective-card></app-objective-card>
     </div>
     <div>
-        <h1 class="montserrat bold text-[1.7rem] text-black" [innerHTML]="nextGoal"></h1>
+        <h1 class="montserrat bold text-[1.7rem]" [innerHTML]="nextGoal"></h1>
         <div>
-            <p class="text-lg text-black">{{ moreProducts }}</p>
+            <p class="text-lg">{{ moreProducts }}</p>
             <div class="flex justify-center items-start gap-3">
                 <p class="text-lg verdana bold">{{ addProducts }}</p>
                 <img [defaultImage]="defaultImage" [lazyLoad]="iconQuestion" [errorImage]="errorImage"
@@ -29,7 +29,7 @@
         </div>
     </div>
     <div>
-        <button class="py-3 px-8 montserrat bold text-lg bg-gray-800 hover:bg-gray-600 rounded-3xl ">
+        <button class="py-3 px-8 montserrat bold text-lg bg-gray-200 hover:bg-gray-300 rounded-3xl ">
             {{ textButton | uppercase }}
         </button>
     </div>

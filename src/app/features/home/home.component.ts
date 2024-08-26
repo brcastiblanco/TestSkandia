@@ -26,7 +26,7 @@ export class HomeComponent {
 
   public money: string = '6.000.000'
   public objective: string = 'Conocer mi sobrino'
-  public nextGoal: string = `¡Vamos por esos <span class="text-orange-600">$${this.money}</span> para <span class="text-orange-600">${this.objective}</span>!`
+  public nextGoal: string = `¡Vamos por esos <span class="text-orange">$${this.money}</span> para <span class="text-orange">${this.objective}</span>!`
   public moreProducts: string = '¡A través de tus productos y nuestros rendimientos podremos lograrlo!'
   public addProducts: string = 'Asocia tus productos o adquiere uno nuevo.'
   public iconQuestion: string = 'assets/question-green.svg'

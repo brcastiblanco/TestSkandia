@@ -1,5 +1,14 @@
+@import '../../../colors.scss';
+
 .list-menu {
     .active {
-        background-color: green;
+        background-color: $green;
+        span {
+            color: #FFFF;
+        }
     }
+}
+
+.bg-light-gray {
+    background-color: $light-gray-2;
 }

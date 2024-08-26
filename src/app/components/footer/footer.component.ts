@@ -23,8 +23,8 @@ export class FooterComponent {
     this.defaultImage = _imgDefaultService.defaultImage
     this.errorImage = _imgDefaultService.errorImage
     this.listContact = [
-      { title: 'PBX: <strong>658 4000</strong> / <strong>484 1300</strong>' },
-      { title: 'Línea nacional <strong>01 8000 517 526</strong>' },
+      { title: 'PBX: <strong class="text-green">658 4000</strong> / <strong class="text-green">484 1300</strong>' },
+      { title: 'Línea nacional <strong class="text-green">01 8000 517 526</strong>' },
       { title: 'Línea Corporativa 658 4123 ' },
       { title: 'Av. 19 # 109A - 30 ' },
       { title: 'Bogotá D.C., Colombia' },

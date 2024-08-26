@@ -1,7 +1,38 @@
+@import '../../../colors.scss';
+
 .bg-banner {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.bg-gray-light {
+    background-color: $gray-light
+}
+
+.bg-green {
+    background-color: $green
+}
+
+
+.border-light-blue {
+    border-bottom-color: $light-blue
+}
+
+.border-dark-blue {
+    border-bottom-color: $dark-blue
+}
+
+.border-peach {
+    border-bottom-color: $peach
+}
+
+.border-green-light {
+    border-bottom-color: $green-light
+}
+
+.border-yellow {
+    border-bottom-color: $yellow
 }
 
 ::ng-deep .owl-carousel {
@@ -31,7 +62,7 @@
 
         .owl-prev,
         .owl-next {
-            background-color: green;
+            background-color: $green;
             height: 40px;
             width: 40px;
             border-radius: 100%;
@@ -47,6 +78,10 @@
                 background-color: gray;
                 cursor: no-drop
             }
+        }
+
+        @media screen {
+            
         }
     }
 }
